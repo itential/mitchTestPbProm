@@ -1,0 +1,35 @@
+{
+  "name": "@mitch/pb-211",
+  "author": "Itential Automation Platform",
+  "version": "0.0.1",
+  "description": "wf-parent-21.1",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "echo not needed npm publish --access=public --registry=http://registry.npmjs.org",
+    "validateSchema": "node test/manifestTester.js manifest.json manifest-schema.json",
+    "validateSchemaLinks": "node test/manifestLinkTester.js manifest.json",
+    "generateImageLinks": "node utils/generateImageLinks.js"
+  },
+  "repository": {
+    "type": "local",
+    "hostname": "localhost",
+    "path": "/"
+  },
+  "keywords": [
+    "Itential",
+    "IAP",
+    "artifacts"
+  ],
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "ajv": "^6.12.6",
+    "better-ajv-errors": "^1.2.0",
+    "fs-extra": "^7.0.1",
+    "r2": "^2.0.1"
+  },
+  "IAPDependencies": {
+    "@itential/app-workflow_engine": "",
+    "@itential/app-json_forms": ""
+  },
+  "IAPCategories": []
+}

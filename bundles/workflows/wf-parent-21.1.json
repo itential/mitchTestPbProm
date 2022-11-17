@@ -1,0 +1,103 @@
+{
+  "name": "wf-parent-21.1",
+  "type": "automation",
+  "tasks": {
+    "workflow_start": {
+      "name": "workflow_start",
+      "groups": [],
+      "x": 0,
+      "y": 0.5
+    },
+    "workflow_end": {
+      "name": "workflow_end",
+      "groups": [],
+      "x": 1,
+      "y": 0.5
+    },
+    "2da2": {
+      "name": "childJob",
+      "canvasName": "childJob",
+      "summary": "Run Child Job",
+      "description": "Runs a child job inside a workflow.",
+      "location": "Application",
+      "locationType": null,
+      "app": "WorkFlowEngine",
+      "type": "operation",
+      "displayName": "WorkFlowEngine",
+      "variables": {
+        "incoming": {
+          "task": "",
+          "workflow": "wf-parent-21.1",
+          "variables": {},
+          "data_array": [
+            {
+              "var": "var"
+            }
+          ],
+          "transformation": "6351891f0bb2ba00d646dd79",
+          "loopType": "sequential"
+        },
+        "outgoing": {
+          "job_details": null
+        }
+      },
+      "deprecated": false,
+      "groups": [],
+      "actor": "job",
+      "x": 0.49706001655898835,
+      "y": 0.5
+    }
+  },
+  "transitions": {
+    "workflow_start": {
+      "2da2": {
+        "type": "standard",
+        "state": "success"
+      }
+    },
+    "workflow_end": {},
+    "2da2": {
+      "workflow_end": {
+        "type": "standard",
+        "state": "success"
+      }
+    }
+  },
+  "font_size": 12,
+  "last_updated": "2022-10-20T17:47:28.880Z",
+  "last_updated_by": {
+    "provenance": "local_aaa",
+    "username": "admin@pronghorn",
+    "firstname": "admin",
+    "inactive": false,
+    "email": ""
+  },
+  "lastUpdatedVersion": "5.40.5-2021.1.115.0",
+  "inputSchema": {
+    "type": "object",
+    "properties": {}
+  },
+  "outputSchema": {
+    "type": "object",
+    "properties": {
+      "_id": {
+        "type": "string",
+        "pattern": "^[0-9a-f]{24}$"
+      },
+      "initiator": {
+        "type": "string"
+      }
+    }
+  },
+  "created": "2022-10-20T17:41:22.863Z",
+  "created_by": {
+    "provenance": "local_aaa",
+    "username": "admin@pronghorn",
+    "firstname": "admin",
+    "inactive": false,
+    "email": ""
+  },
+  "createdVersion": "5.40.5-2021.1.115.0",
+  "tags": [],
+  "groups": []
+}

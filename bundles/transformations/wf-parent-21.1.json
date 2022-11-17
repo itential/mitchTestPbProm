@@ -1,0 +1,64 @@
+{
+  "_id": "6351891f0bb2ba00d646dd79",
+  "name": "wf-parent-21.1",
+  "incoming": [
+    {
+      "$id": "currentValue",
+      "type": [
+        "array",
+        "boolean",
+        "integer",
+        "null",
+        "number",
+        "object",
+        "string"
+      ],
+      "$immutable": true
+    }
+  ],
+  "outgoing": [
+    {
+      "$id": "currentValue",
+      "type": "string",
+      "examples": [
+        "currentValue"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "type": "assign",
+      "from": {
+        "location": "incoming",
+        "name": "currentValue",
+        "ptr": ""
+      },
+      "to": {
+        "location": "outgoing",
+        "name": "currentValue",
+        "ptr": ""
+      }
+    }
+  ],
+  "functions": [],
+  "comments": [],
+  "view": {
+    "col": 0,
+    "row": 5
+  },
+  "created": "2022-10-20T17:45:03.987Z",
+  "createdBy": {
+    "_id": "634d98af40d477fc5be97fca",
+    "provenance": "local_aaa",
+    "username": "admin@pronghorn"
+  },
+  "lastUpdated": "2022-10-20T17:47:05.483Z",
+  "lastUpdatedBy": {
+    "_id": "634d98af40d477fc5be97fca",
+    "provenance": "local_aaa",
+    "username": "admin@pronghorn"
+  },
+  "version": "3.17.7-2021.1.15",
+  "tags": []
+}
