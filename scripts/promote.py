@@ -26,9 +26,7 @@ if not (artifact_path and hostname and (token or (username and pw))):
   print(token)
   print(username)
   print(pw)
-  print("Missing environmental variables.
-Make sure your environmental variables are set properly.
-Exiting...")
+  print("Missing environmental variables. Make sure your environmental variables are set properly. Exiting...")
   sys.exit(1)
 
 artifact = json.load(open(f"{artifact_path}"))
