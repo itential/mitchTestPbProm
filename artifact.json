@@ -1,0 +1,224 @@
+{
+  "metadata": {
+    "name": "@mitch/pb-211",
+    "version": "0.0.2",
+    "description": "wf-parent-21.1",
+    "license": "Apache-2.0",
+    "repository": {
+      "type": "local",
+      "hostname": "localhost",
+      "path": "/"
+    },
+    "keywords": [
+      "Itential",
+      "IAP",
+      "artifacts"
+    ],
+    "author": "Itential Automation Platform",
+    "IAPDependencies": {
+      "@itential/app-workflow_engine": "",
+      "@itential/app-json_forms": ""
+    }
+  },
+  "manifest": {
+    "bundleName": "@mitch/pb-211",
+    "fingerprint": "63769cb1870fe8007a1a7f37",
+    "createdEpoch": "1668717745389",
+    "artifacts": [
+      {
+        "id": "wf-parent-21.1",
+        "name": "wf-parent-21.1",
+        "type": "workflow",
+        "location": "/bundles/workflows/wf-parent-21.1.json",
+        "properties": {
+          "entryPoint": false
+        }
+      },
+      {
+        "id": "6351891f0bb2ba00d646dd79",
+        "name": "wf-parent-21.1",
+        "type": "transformation",
+        "location": "/bundles/transformations/wf-parent-21.1.json",
+        "properties": {
+          "entryPoint": false
+        }
+      }
+    ]
+  },
+  "bundles": [
+    {
+      "type": "workflow",
+      "data": {
+        "name": "wf-parent-21.1",
+        "type": "automation",
+        "tasks": {
+          "workflow_start": {
+            "name": "workflow_start",
+            "groups": [],
+            "x": 0,
+            "y": 0.5
+          },
+          "workflow_end": {
+            "name": "workflow_end",
+            "groups": [],
+            "x": 1,
+            "y": 0.5
+          },
+          "2da2": {
+            "name": "childJob",
+            "canvasName": "childJob",
+            "summary": "Run Child Job",
+            "description": "Runs a child job inside a workflow.",
+            "location": "Application",
+            "locationType": null,
+            "app": "WorkFlowEngine",
+            "type": "operation",
+            "displayName": "WorkFlowEngine",
+            "variables": {
+              "incoming": {
+                "task": "",
+                "workflow": "wf-parent-21.1",
+                "variables": {},
+                "data_array": [
+                  {
+                    "var": "var"
+                  }
+                ],
+                "transformation": "6351891f0bb2ba00d646dd79",
+                "loopType": "sequential"
+              },
+              "outgoing": {
+                "job_details": null
+              }
+            },
+            "deprecated": false,
+            "groups": [],
+            "actor": "job",
+            "x": 0.49706001655898835,
+            "y": 0.5
+          }
+        },
+        "transitions": {
+          "workflow_start": {
+            "2da2": {
+              "type": "standard",
+              "state": "success"
+            }
+          },
+          "workflow_end": {},
+          "2da2": {
+            "workflow_end": {
+              "type": "standard",
+              "state": "success"
+            }
+          }
+        },
+        "font_size": 12,
+        "last_updated": "2022-10-20T17:47:28.880Z",
+        "last_updated_by": {
+          "provenance": "local_aaa",
+          "username": "admin@pronghorn",
+          "firstname": "admin",
+          "inactive": false,
+          "email": ""
+        },
+        "lastUpdatedVersion": "5.40.5-2021.1.115.0",
+        "inputSchema": {
+          "type": "object",
+          "properties": {}
+        },
+        "outputSchema": {
+          "type": "object",
+          "properties": {
+            "_id": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{24}$"
+            },
+            "initiator": {
+              "type": "string"
+            }
+          }
+        },
+        "created": "2022-10-20T17:41:22.863Z",
+        "created_by": {
+          "provenance": "local_aaa",
+          "username": "admin@pronghorn",
+          "firstname": "admin",
+          "inactive": false,
+          "email": ""
+        },
+        "createdVersion": "5.40.5-2021.1.115.0",
+        "tags": [],
+        "groups": []
+      }
+    },
+    {
+      "type": "transformation",
+      "data": {
+        "_id": "6351891f0bb2ba00d646dd79",
+        "name": "wf-parent-21.1",
+        "incoming": [
+          {
+            "$id": "currentValue",
+            "type": [
+              "array",
+              "boolean",
+              "integer",
+              "null",
+              "number",
+              "object",
+              "string"
+            ],
+            "$immutable": true
+          }
+        ],
+        "outgoing": [
+          {
+            "$id": "currentValue",
+            "type": "string",
+            "examples": [
+              "currentValue"
+            ]
+          }
+        ],
+        "steps": [
+          {
+            "id": 1,
+            "type": "assign",
+            "from": {
+              "location": "incoming",
+              "name": "currentValue",
+              "ptr": ""
+            },
+            "to": {
+              "location": "outgoing",
+              "name": "currentValue",
+              "ptr": ""
+            }
+          }
+        ],
+        "functions": [],
+        "comments": [],
+        "view": {
+          "col": 0,
+          "row": 5
+        },
+        "created": "2022-10-20T17:45:03.987Z",
+        "createdBy": {
+          "_id": "634d98af40d477fc5be97fca",
+          "provenance": "local_aaa",
+          "username": "admin@pronghorn"
+        },
+        "lastUpdated": "2022-10-20T17:47:05.483Z",
+        "lastUpdatedBy": {
+          "_id": "634d98af40d477fc5be97fca",
+          "provenance": "local_aaa",
+          "username": "admin@pronghorn"
+        },
+        "version": "3.17.7-2021.1.15",
+        "tags": []
+      }
+    }
+  ],
+  "readme": "wf-parent-21.1"
+}
