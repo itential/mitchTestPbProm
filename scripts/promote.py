@@ -21,6 +21,11 @@ if not token:
   pw = os.environ.get("IAP_PW")
 
 if not (artifact_path and hostname and (token or (username and pw))):
+  print(artifact_path)
+  print(hostname)
+  print(token)
+  print(username)
+  print(pw)
   print("Missing environmental variables.
 Make sure your environmental variables are set properly.
 Exiting...")
